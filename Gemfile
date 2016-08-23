@@ -5,8 +5,6 @@ source 'https://rubygems.org'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use bootstrap
 gem 'bootstrap-sass', '3.3.6'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -34,6 +32,8 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 end
@@ -53,6 +53,11 @@ group :test do
   gem 'minitest-reporters', '~> 1.1', '>= 1.1.11'
   gem 'guard', '2.13.0'
   gem 'guard-minitest', '2.4.4'
+end
+
+group :production do
+  #use pg as the database for deployment to heroku
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
