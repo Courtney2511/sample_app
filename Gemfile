@@ -28,6 +28,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 # Use faker to make sample users
 gem 'faker', '1.6.3'
+# Use will_paginate for pagination
+gem 'will_paginate', '3.1.0'
+gem 'bootstrap-will_paginate', '0.0.10'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
